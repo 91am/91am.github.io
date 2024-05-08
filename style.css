@@ -8,7 +8,7 @@
     --font-size-xxl: 7.5rem;
     --font-size-xl: 5rem;
     --font-size-l: 4.5rem;
-    --font-size-m: 4rem;
+    --font-size-m: 3.3rem;
     --font-size-s: 1.5rem;
     --font-size-xs: 1rem;
     --font-size-xxs: 0.8rem;
@@ -288,7 +288,7 @@ nav {
         display: flex;
         flex-direction: column;
         text-align: justify;
-
+        word-spacing: -5px;
     }
 
     .cv-container {
@@ -385,6 +385,7 @@ h2 {
     display: flex;
     flex-direction: column;
     text-align: justify;
+    word-spacing: -5px;
 
     @media screen and (max-width:1080px) {
         width: 100%;
@@ -653,6 +654,10 @@ footer {
     margin-top: 16px;
     border: 2px solid var(--tertiary-color);
 
+    @media screen and (max-width:600px) {
+       flex-direction: column;
+    }
+
     .contact-info {
         font-family: var(--font-family-secondary);
         font-size: var(--font-size-xs);
@@ -671,6 +676,7 @@ footer {
             img {
                 max-width: 24px;
             }
+
         }
     }
 
@@ -680,6 +686,10 @@ footer {
         color: var(--secondary-color);
         text-align: right;
 
+        @media screen and (max-width:600px) {
+            text-align: left;
+        }
+
         ul {
             list-style: none;
             display: flex;
@@ -687,6 +697,11 @@ footer {
             gap: 16px;
             margin-bottom: 16px;
             margin-top: 16px;
+
+            @media screen and (max-width:600px) {
+                justify-content: left;
+                }
+
 
             img {
                 max-width: 24px;
