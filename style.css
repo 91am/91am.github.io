@@ -78,7 +78,13 @@ header {
     }
 
     #modal-menu {
-        display: none;
+        position: absolute;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 9;
+
     }
 
     #modal-menu.opened {
@@ -95,6 +101,7 @@ header {
         justify-items: center;
         align-items: center;
         justify-content: center;
+        opacity: 1;
     }
 
     .menu {
@@ -431,11 +438,12 @@ h2 {
         font-size: var(--font-size-s);
         cursor: pointer;
         gap: 8px;
-        align-items: center;
+        align-items: baseline;
         line-height: 1;
 
         @media screen and (max-width:1080px) {
             gap: 40px;
+            align-items: center;
         }
     }
 
@@ -650,8 +658,9 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 24px 16px;
+    padding: 40px 40px 24px 40px;
     margin-top: 16px;
+    margin-bottom: 16px;
     border: 2px solid var(--tertiary-color);
 
     @media screen and (max-width:600px) {
@@ -663,14 +672,10 @@ footer {
         font-size: var(--font-size-xs);
         color: var(--secondary-color);
 
-        @media screen and (max-width:600px) {
-            font-size: var(--font-size-xs);
-        }
-
         li {
             list-style: none;
             display: flex;
-            gap: 8px;
+            gap: 16px;
             margin-bottom: 16px;
 
             img {
