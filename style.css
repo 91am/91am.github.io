@@ -8,8 +8,8 @@
     --font-size-xxl: 7.5rem;
     --font-size-xl: 5rem;
     --font-size-l: 4.5rem;
-    --font-size-m: 3.3rem;
-    --font-size-s: 1.5rem;
+    --font-size-m: 3rem;
+    --font-size-s: 1.8rem;
     --font-size-xs: 1rem;
     --font-size-xxs: 0.8rem;
 }
@@ -408,6 +408,7 @@ h2 {
 }
 
 .social-media-links {
+    
     img {
         max-width: 24px;
     }
@@ -428,21 +429,20 @@ h2 {
 .projects-portfolio-links {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
 
     li {
         list-style: none;
         display: flex;
         color: var(--secondary-color);
         font-family: var(--font-family-secondary);
-        font-size: var(--font-size-s);
+        font-size: var(--font-size-m);
         cursor: pointer;
         gap: 8px;
-        align-items: baseline;
         line-height: 1;
 
         @media screen and (max-width:1080px) {
-            gap: 40px;
+            gap: 12px;
             align-items: center;
         }
     }
@@ -456,7 +456,7 @@ h2 {
 
     a {
         width: 260px;
-        text-align: end;
+        text-align: left;
 
         &:hover {
             color: var(--accent-color);
@@ -465,6 +465,8 @@ h2 {
         @media screen and (max-width:1080px) {
             width: 180px;
             text-align: start;
+            font-size: var(--font-size-s);
+            
         }
     }
 }
